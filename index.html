@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiGravity Studio | Defy Gravity in Creativity</title>
+    <meta name="description" content="AntiGravity Studio is a premium digital agency specializing in video editing, marketing, branding, and web design.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-text">Anti<span>Gravity</span></span>
+            </div>
+            <div class="loader-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Anti<span>Gravity</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-primary small">Start a Project</a>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-video-container">
+                <!-- Fallback image -->
+                <img src="assets/hero-bg.png" alt="Hero Background" class="hero-bg-fallback">
+                <!-- Using a high-quality free stock video for demonstration -->
+                <video autoplay muted loop playsinline id="hero-video">
+                    <source src="https://cdn.pixabay.com/vimeo/328940142/stars-22536.mp4?width=1280&hash=1d23b20755b7f949c8646b9c9d09c8f8b89e3a6c" type="video/mp4">
+                </video>
+                <div class="overlay"></div>
+            </div>
+            
+            <canvas id="particles-canvas"></canvas>
+
+            <div class="hero-content">
+                <h2 class="pre-title" data-gsap="reveal">The Future of Creativity</h2>
+                <h1 class="main-title" data-gsap="reveal-stagger">AntiGravity <span>Studio</span></h1>
+                <p class="sub-title" data-gsap="reveal">We Defy Gravity in Creativity & Digital Marketing. We don't just follow trends; we create the atmosphere where they live.</p>
+                <div class="hero-btns" data-gsap="reveal">
+                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text" data-gsap="fade-up">
+                        <span class="section-tag">Who We Are</span>
+                        <h2>Defying the Norms of Digital <span>Brilliance</span></h2>
+                        <p>AntiGravity Studio is a premium digital agency that operates at the intersection of technology and human emotion. We believe that great brands are built through storytelling, precision, and a touch of the extraordinary.</p>
+                        <p>Our mission is to elevate your brand above the noise, providing high-end creative solutions that resonate with your audience and drive measurable results.</p>
+                        <div class="about-counters">
+                            <div class="counter-item">
+                                <span class="counter" data-target="150">0</span>+
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="counter-item">
+                                <span class="counter" data-target="98">0</span>%
+                                <p>Happy Clients</p>
+                            </div>
+                            <div class="counter-item">
+                                <span class="counter" data-target="10">0</span>+
+                                <p>Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual" data-gsap="fade-left">
+                        <div class="visual-card glass">
+                            <img src="assets/branding.png" alt="About Visual">
+                            <div class="glow-effect"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding">
+            <div class="container">
+                <div class="section-header center" data-gsap="fade-up">
+                    <span class="section-tag">Our Expertise</span>
+                    <h2>Elite Services for <span>Modern Brands</span></h2>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card glass" data-gsap="fade-up">
+                        <div class="icon-box">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Video Editing</h3>
+                        <p>Cinematic storytelling and professional post-production that captures attention and delivers your message with impact.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card glass" data-gsap="fade-up">
+                        <div class="icon-box">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Digital Marketing</h3>
+                        <p>Data-driven strategies and creative campaigns that scale your business and dominate your niche market.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card glass" data-gsap="fade-up">
+                        <div class="icon-box">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3>Branding Design</h3>
+                        <p>Visual identities that reflect your soul. From logos to complete brand systems that stand the test of time.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card glass" data-gsap="fade-up">
+                        <div class="icon-box">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Bespoke digital experiences that combine high-end aesthetics with seamless functionality and performance.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section-padding">
+            <div class="container">
+                <div class="section-header" data-gsap="fade-up">
+                    <span class="section-tag">Our Work</span>
+                    <h2>Selected <span>Masterpieces</span></h2>
+                    <div class="portfolio-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="video">Video</button>
+                        <button class="filter-btn" data-filter="design">Design</button>
+                        <button class="filter-btn" data-filter="web">Web</button>
+                    </div>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item video" data-gsap="fade-up">
+                        <div class="portfolio-img glass">
+                            <img src="assets/video-editing.png" alt="Project 1">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span>Video Production</span>
+                                    <h4>Cosmic Odyssey</h4>
+                                    <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item design" data-gsap="fade-up">
+                        <div class="portfolio-img glass">
+                            <img src="assets/branding.png" alt="Project 2">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span>Branding</span>
+                                    <h4>Neon Pulse</h4>
+                                    <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item web" data-gsap="fade-up">
+                        <div class="portfolio-img glass">
+                            <img src="assets/web-design.png" alt="Project 3">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <span>Web Design</span>
+                                    <h4>Quantum Portal</h4>
+                                    <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section-padding">
+            <div class="container">
+                <div class="section-header center" data-gsap="fade-up">
+                    <span class="section-tag">Testimonials</span>
+                    <h2>What Our <span>Partners Say</span></h2>
+                </div>
+                <div class="testimonial-slider-container">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-card glass">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"AntiGravity Studio transformed our brand identity into something truly extraordinary. Their attention to detail and creative vision is unmatched."</p>
+                            <div class="client-info">
+                                <h5>Sarah Jenkins</h5>
+                                <span>CEO, TechVantage</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glass">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"The video editing work they did for our campaign was breathtaking. It perfectly captured the essence of our product."</p>
+                            <div class="client-info">
+                                <h5>Michael Ross</h5>
+                                <span>Marketing Director, Zenith</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glass">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"A highly professional team that understands modern UI/UX design. Our website performance has increased by 200% since the redesign."</p>
+                            <div class="client-info">
+                                <h5>David Chen</h5>
+                                <span>Founder, Nova Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button id="prev-test"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button id="next-test"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info" data-gsap="fade-right">
+                        <span class="section-tag">Get in Touch</span>
+                        <h2>Ready to <span>Defy Gravity?</span></h2>
+                        <p>Let's collaborate and build something legendary together. Reach out via the form or through our direct channels.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="method-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h5>WhatsApp</h5>
+                                    <p>+1 (555) 000-GRAV</p>
+                                </div>
+                            </div>
+                            <div class="method-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p>hello@antigravity.studio</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form-container" data-gsap="fade-left">
+                        <form id="contact-form" class="glass">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="#">Anti<span>Gravity</span></a>
+                    </div>
+                    <p>Elevating brands through premium creativity and innovative technology. Based in the future, working worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h5>Stay Updated</h5>
+                    <p>Subscribe to our creative insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AntiGravity Studio. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/d67e6d0891.js" crossorigin="anonymous"></script>
+</body>
+</html>
